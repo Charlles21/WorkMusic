@@ -30,15 +30,14 @@ public class ArtistaServicesIMPL implements ArtistaServices {
     }
 
     @Override
-    public Artista editarPorId(String id, Artista artista) {
+    public Artista editarPorId(Artista artista) {
         
-        return null;
+        return artista_repository.save(artista);
     }
 
     @Override
     public void deletarPorId(String id) {
-        // TODO Auto-generated method stub
-        
+        artista_repository.deleteById(id);        
     }
 
     

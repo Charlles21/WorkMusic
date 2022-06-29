@@ -13,7 +13,7 @@ public interface ArtistaServices {
 
     public Artista cadastrar(Artista artista);
 
-    public Artista editarPorId(String id, Artista artista);
+    public Artista editarPorId(Artista artista);
     
     public void deletarPorId(String id);
     
