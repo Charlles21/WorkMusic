@@ -2,20 +2,22 @@ package com.sony.album_sony.model;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Album {
+    @Id
+    private String id;
     
-    private Date dataLancamento;
+    private String dataLancamento;
     private String nome;
-    private String duracao;   
-    
+    private String duracao;    
 
-    public Date getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
     public String getNome() {
@@ -33,5 +35,15 @@ public class Album {
 
     public void setId(String id) {
     }
+    public String getId() {
+        return id;
+    }
+
+    /*{
+        "dataLancamento": 01/02/2022,
+        "nome": "teste",
+        "duracao": 77 minutos
+   
+    }*/
 
 }

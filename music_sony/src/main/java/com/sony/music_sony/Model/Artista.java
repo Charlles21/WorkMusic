@@ -22,6 +22,7 @@ public class Artista {
     private String nomeArtista;
     private int idade;
     private double altura;
+    private Album album;
 
 
     /*{

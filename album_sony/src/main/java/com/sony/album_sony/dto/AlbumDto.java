@@ -2,17 +2,21 @@ package com.sony.album_sony.dto;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+
 public class AlbumDto {
     
-    private Date dataLancamento;
+    @Id
+    private String id;
+    private String dataLancamento;
     private String nome;
     private String duracao;
-
-    public Date getDataLancamento() {
+    
+    public String getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
@@ -30,6 +34,14 @@ public class AlbumDto {
     
     public void setDuracao(String duracao) {
         this.duracao = duracao;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

@@ -31,12 +31,12 @@ public class AlbumController {
         return service.obterTodosOsAlbuns();
     }
     
-    @PostMapping
+    @PostMapping("/cadastrar")
     public ResponseEntity<AlbumDto> cadastrarAlbum(@RequestBody AlbumDto album){
         return new ResponseEntity<>(service.cadastrarAlbum(album), HttpStatus.CREATED);
     } 
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deletar/{id}")
     public void excluirAlbum(@PathVariable String id){
         service.excluirAlbum(id);
     }
