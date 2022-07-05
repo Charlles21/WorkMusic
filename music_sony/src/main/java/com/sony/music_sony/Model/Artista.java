@@ -25,9 +25,7 @@ public class Artista {
     private int idade;
     private double altura;
     private String album;
-    private ArtistaComAlbum AlbumDetalhe;
-
-
+    
     /*{
         "id" : "id",
         "nomeArtista" : "nome",
