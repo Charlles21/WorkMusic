@@ -49,12 +49,13 @@ public class ArtistaServicesIMPL implements ArtistaServices {
 
     @Override
     public Optional<ArtistaComAlbum> obterPorID(String id) {
-        Optional<Artista> artista = artista_repository.findById(id);
+        Optional<Artista> artista = artista_repository.findById(id);        
         
         if(artista.isPresent()){
             ArtistaComAlbum Artista_dto = new ModelMapper().map(artista.get(), ArtistaComAlbum.class);
-            Album album = feign_Artista.obterAlbumPorId(artista.get().getAlbum().getId());
-            Artista_dto.setAlbum(album);
+            Album album = feign_Artista.obterAlbumPorId(artista.get().getAlbum());
+
+            Artista_dto.setAlbumComDetalhe(album);
             return Optional.of(Artista_dto);
         }
         

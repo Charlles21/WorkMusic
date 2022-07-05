@@ -5,6 +5,8 @@ package com.sony.music_sony.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.sony.music_sony.Feign.ArtistaComAlbum;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +24,8 @@ public class Artista {
     private String nomeArtista;
     private int idade;
     private double altura;
-    private Album album;
+    private String album;
+    private ArtistaComAlbum AlbumDetalhe;
 
 
     /*{

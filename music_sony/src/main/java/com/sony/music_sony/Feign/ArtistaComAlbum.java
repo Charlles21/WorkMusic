@@ -15,15 +15,5 @@ public class ArtistaComAlbum extends Artista{
         this.album = album;
     }
 
-    public Album getAlbum() {
-        return album;
-    }
-
-    public void setAlbum(Album album) {
-        this.album = album;
-    }
-
-    
-
     
 }
