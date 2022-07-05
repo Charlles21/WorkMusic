@@ -13,6 +13,6 @@ import com.sony.music_sony.Model.Album;
 @FeignClient("album-ms")
 public interface FeignArtista {
     
-    @RequestMapping(method = RequestMethod.GET, value = "/achar_por_id/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/albuns/achar_por_id/{id}")
     Album obterAlbumPorId(@PathVariable String id);
 }
