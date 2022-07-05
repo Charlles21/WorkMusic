@@ -3,15 +3,15 @@ package com.sony.music_sony.Model;
 import java.util.Date;
 
 public class Album {    
-    private Date dataLancamento;
+    private String dataLancamento;
     private String nome;
     private String duracao;
 
     
-    public Date getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
     public String getNome() {
