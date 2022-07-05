@@ -1,8 +1,10 @@
 package com.sony.album_sony.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.sony.album_sony.dto.AlbumDto;
+import com.sony.album_sony.model.Album;
 import com.sony.album_sony.service.AlbumService;
 
 
@@ -29,6 +31,12 @@ public class AlbumController {
     @GetMapping
     public List<AlbumDto> obterAlbuns(){
         return service.obterTodosOsAlbuns();
+    }
+
+    @GetMapping(path="/achar_por_id/{id}")
+    public Optional<Album> acharPorId(@PathVariable String id){
+
+        return service.acharPorId(id);
     }
     
     @PostMapping("/cadastrar")

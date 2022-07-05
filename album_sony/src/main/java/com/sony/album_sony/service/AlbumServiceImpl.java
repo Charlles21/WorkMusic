@@ -62,4 +62,10 @@ public class AlbumServiceImpl implements AlbumService {
     return mapper.map(album, AlbumDto.class);
     }
 
+    @Override
+    public Optional<Album> acharPorId(String id) {
+        
+        return repository.findById(id);
+    }
+
 }

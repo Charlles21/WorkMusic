@@ -43,7 +43,7 @@ public class ArtistaController {
         return this.artista_ServicesIMPL.cadastrar(artista);
     }
 
-    @GetMapping(path ="/{id}")
+    @GetMapping(path = "/{id}")
     public Optional<Artista> acharPorId(@PathVariable String id){
         return artista_ServicesIMPL.acharPorId(id);
     }

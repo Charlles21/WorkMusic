@@ -1,20 +1,29 @@
 package com.sony.music_sony.Feign;
 
-import java.util.List;
-
 import com.sony.music_sony.Model.Album;
 import com.sony.music_sony.Model.Artista;
 
 public class ArtistaComAlbum extends Artista{
+
+    private Album album;
     
-    private List<Album> albuns;
-
-    public List<Album> pegaAlbuns(){
-        return albuns;
+    public Album getAlbumComDetalhe(){
+        return album;
     }
 
-    public void setAlbuns(List<Album> albuns){
-        this.albuns = albuns;
-        
+    public void setAlbumComDetalhe(Album album){
+        this.album = album;
     }
+
+    public Album getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+
+    
+
+    
 }

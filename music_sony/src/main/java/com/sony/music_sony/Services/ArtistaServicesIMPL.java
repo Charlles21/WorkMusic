@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.sony.music_sony.Feign.ArtistaComAlbum;
 import com.sony.music_sony.Feign.FeignArtista;
+import com.sony.music_sony.Model.Album;
 import com.sony.music_sony.Model.Artista;
 import com.sony.music_sony.Repository.ArtistaRepository;
 @Service
@@ -52,7 +53,8 @@ public class ArtistaServicesIMPL implements ArtistaServices {
         
         if(artista.isPresent()){
             ArtistaComAlbum Artista_dto = new ModelMapper().map(artista.get(), ArtistaComAlbum.class);
-            Artista_dto.setAlbuns(feign_Artista.obterAlbum(id));
+            Album album = feign_Artista.obterAlbumPorId(artista.get().getAlbum().getId());
+            Artista_dto.setAlbum(album);
             return Optional.of(Artista_dto);
         }
         
